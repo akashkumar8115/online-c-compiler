@@ -5,7 +5,7 @@ import { cpp } from '@codemirror/lang-cpp';
 import { ResizableBox } from 'react-resizable';
 import 'react-resizable/css/styles.css';
 // import './CppCompiler.css'; // External CSS file for styling
-import "../component/Index.css"
+import "./Index.css"
 
 const CppCompiler = () => {
     const [code, setCode] = useState('');
@@ -14,7 +14,7 @@ const CppCompiler = () => {
 
     const handleRunCode = () => {
         setLoading(true); // Show loader animation
-        axios.post('http://localhost:5000/run', { code })
+        axios.post('/run', { code })
             .then((response) => {
                 setOutput(response.data.output);
                 setLoading(false); // Hide loader animation

@@ -1,0 +1,113 @@
+/* Overall container styling */
+.compiler-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    /* VSCode dark background */
+    color: #dcdcdc;
+    /* VSCode light text color */
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+    /* VSCode font */
+}
+
+/* Title styling */
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #569cd6;
+    /* VSCode title color */
+}
+
+/* Resizable editor styling */
+.resizable-editor {
+    position: relative;
+    background-color: #1e1e1e;
+    /* Dark editor background */
+    border: 1px solid #333;
+    /* Editor border */
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: scroll;
+}
+
+/* Run button styling */
+.run-button {
+    background-color: #007acc;
+    /* VSCode blue button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.run-button:hover {
+    background-color: #005a9e;
+    /* Darker blue on hover */
+}
+
+/* Loader animation */
+.loader {
+    border: 4px solid #f3f3f3;
+    /* Light grey */
+    border-top: 4px solid #007acc;
+    /* VSCode blue spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Output title styling */
+.output-title {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Output box styling */
+.output-box {
+    background-color: #1e1e1e;
+    /* Dark output box background */
+    color: #dcdcdc;
+    /* Light text color */
+    border: 1px solid #333;
+    /* Output box border */
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    max-width: 1000px;
+    white-space: pre-wrap;
+    /* Preserve whitespace formatting */
+    height: 20vh;
+    overflow: scroll;
+}
+
+
+/* scroll bar css  */
+::-webkit-scrollbar {
+    width: 5px; /* width of the scrollbar */
+    height: 10px; /* height of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* color of the scrollbar thumb */
+    border-radius: 20px; /* rounded corners of the scrollbar thumb */
+  }

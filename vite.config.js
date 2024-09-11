@@ -16,7 +16,7 @@ export default defineConfig({
     proxy: {
       // The key here is the path you want to proxy
       '/api': {
-        target: 'https://backend-online-c-compiler.vercel.app/', // Your backend server URL
+        target: 'https://backendcppcompiler-nrcs9hcj.b4a.run/', // Your backend server URL
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },

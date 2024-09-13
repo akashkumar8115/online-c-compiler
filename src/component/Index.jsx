@@ -13,7 +13,7 @@ const CppCompiler = () => {
 
     const handleRunCode = () => {
         setLoading(true); // Show loader animation
-        axios.post('/run', { code })
+        axios.post('/api/run', { code })
             .then((response) => {
                 setOutput(response.data.output);
                 setLoading(false); // Hide loader animation
@@ -27,7 +27,6 @@ const CppCompiler = () => {
     return (
         <div className="compiler-container">
             <h1 className="title">C++ Online Compiler</h1>
-
             <ResizableBox
                 minConstraints={[300, 200]}
                 maxConstraints={[1200, 800]}

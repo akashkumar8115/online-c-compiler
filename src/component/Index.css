@@ -72,6 +72,10 @@
     font-size: 18px;
     margin-top: 20px;
 }
+.output-field{
+    width: 100%;
+    display: flex;
+}
 
 /* Output box styling */
 .output-box {
@@ -172,5 +176,34 @@
 
     .output-box {
         height: 35vh;
+    }
+}
+
+
+/* text */
+/* Base styles for the textarea */
+.input-textarea {
+    position: relative;
+    background-color: #1e1e1e; /* Dark editor background */
+    border: 1px solid #333; /* Editor border */
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: scroll;
+    height: 5%;
+    width: 90%;
+    color: white;
+}
+
+/* Styles for larger screens */
+@media (min-width: 600px) {
+    .input-textarea {
+        min-height: 5%; /* Larger minimum height for bigger screens */
+    }
+}
+
+/* Styles for extra large screens */
+@media (min-width: 1200px) {
+    .input-textarea {
+        min-height: 5%; /* Even larger minimum height for very large screens */
     }
 }

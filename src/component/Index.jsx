@@ -55,16 +55,20 @@ const CppCompiler = () => {
                         matchBrackets: true
                     }}
                 />
-            </ResizableBox>
-
+            </ResizableBox> <br />
+            <textarea
+                className="input-textarea"
+                placeholder="Enter input for your code..."
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+            />
             <button className="run-button" onClick={handleRunCode}>Run Code</button>
 
             {loading && <div className="loader"></div>}
-
-            <h2 className="output-title">Output:</h2>
-            <pre className="output-box" value={input}
-                onChange={(value) => setInput(value)}>{output}</pre>
-
+            <div className="output-field">
+                {/* <h2 className="output-title">Output:</h2> */}
+            </div>
+                <pre className="output-box" placeholder="Here is output your code">{output}</pre>
 
         </div>
     );

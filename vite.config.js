@@ -8,7 +8,6 @@ export default defineConfig({
       '/api': {
         target: 'https://backend-online-cpp-compiler.onrender.com',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },

@@ -14,7 +14,7 @@ const CppCompiler = () => {
 
     const handleRunCode = () => {
         setLoading(true); // Show loader animation
-        axios.post('https://backend-online-cpp-compiler.onrender.com/run', { code, input },
+        axios.post('/api/run', { code, input },
             {
                 withCredentials: true,
                 headers: {

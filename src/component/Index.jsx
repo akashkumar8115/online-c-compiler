@@ -8,12 +8,13 @@ import "./Index.css"
 
 const CppCompiler = () => {
     const [code, setCode] = useState('');
+    const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
     const [loading, setLoading] = useState(false);
 
     const handleRunCode = () => {
         setLoading(true); // Show loader animation
-        axios.post('/api/run', { code },
+        axios.post('https://backend-online-cpp-compiler.onrender.com/run', { code, input },
             {
                 withCredentials: true,
                 headers: {
@@ -61,7 +62,10 @@ const CppCompiler = () => {
             {loading && <div className="loader"></div>}
 
             <h2 className="output-title">Output:</h2>
-            <pre className="output-box">{output}</pre>
+            <pre className="output-box" value={input}
+                onChange={(value) => setInput(value)}>{output}</pre>
+
+
         </div>
     );
 };

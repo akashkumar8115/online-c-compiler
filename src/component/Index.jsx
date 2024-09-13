@@ -13,7 +13,14 @@ const CppCompiler = () => {
 
     const handleRunCode = () => {
         setLoading(true); // Show loader animation
-        axios.post('/api/run', { code })
+        axios.post('/api/run', { code },
+            {
+                withCredentials: true,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }
+        )
             .then((response) => {
                 setOutput(response.data.output);
                 setLoading(false); // Hide loader animation
